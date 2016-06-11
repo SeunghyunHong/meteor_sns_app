@@ -20,3 +20,8 @@ ecmascript              # Enable ECMAScript2015+ syntax in app code
 twbs:bootstrap
 session
 kadira:flow-router
+accounts-password
+ian:accounts-ui-bootstrap-3
+check
+jparker:gravatar
+momentjs:moment
