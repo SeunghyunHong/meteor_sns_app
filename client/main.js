@@ -1,15 +1,19 @@
+Template.main.onCreated(function() {
+    this.subscribe("getPage");
+});
 Template.main.helpers({
     "page": function() {
-        return Session.get("pageId");
+        return Session.get("pageId")|| 'popular';
     }
 });
-// form 여러개의 경우 ex) submit #msg  //<form id="msg">
+// ex) form 여러개의 경우  "submit #msg"  //<form id="msg">
 Template.main.events({
     "submit #msg":function(event,template){
         Meteor.call("addPost",{
             name:"Doggy",
             profile_image:
             "http://lorempixel.com/64/64/animals",
+            pageId: Session.get('pageId'),
             message:
             template.find("#post").value
         },function(error,result){

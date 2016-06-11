@@ -1,3 +1,6 @@
+Template.posts.onCreated(function() {
+    this.subscribe('getPage', Session.get('pageId'));
+});
 Template.posts.helpers({
     "posts":function(){
         return Posts.find({},{

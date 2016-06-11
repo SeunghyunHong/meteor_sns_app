@@ -6,6 +6,7 @@ Meteor.methods({
                 name: obj.name,
                 profile_image: obj.profile_image
             },
+            pageId:obj.pageId,
             createdAt: new Date(),
             message: obj.message
         });
